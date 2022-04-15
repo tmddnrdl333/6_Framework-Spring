@@ -1,0 +1,7 @@
+package com.ssafy.hw.badver;
+
+public class HiMain {
+	public static void main(String[] args) {
+		
+	}
+}

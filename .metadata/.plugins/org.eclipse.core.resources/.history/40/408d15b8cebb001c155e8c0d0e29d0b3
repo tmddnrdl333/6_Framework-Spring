@@ -1,0 +1,17 @@
+package com.ssafy.step01.reflect;
+
+import java.util.Scanner;
+
+public class CarReflectionTest {
+	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		String className = sc.next();
+		String methodName = sc.next();
+
+		Class c = Class.forName(className);
+
+		Object o1 = c.getDeclaredConstructor().newInstance();
+		Object o2 = c.getDeclaredConstructor().newInstance();
+		o.getClass().getDeclaredMethod(methodName);
+	}
+}

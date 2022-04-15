@@ -1,0 +1,5 @@
+package com.ssafy.step01.reflect;
+
+public class Car {
+	private int speed;
+}

@@ -1,0 +1,10 @@
+package com.ssafy.step01.reflect;
+
+import java.util.Scanner;
+
+public class CarReflectionTest {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String className = sc.next();
+	}
+}

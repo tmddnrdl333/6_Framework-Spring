@@ -1,0 +1,7 @@
+package com.ssafy.hw.badver;
+
+public class HiMsgKor {
+	public String HiEng(String name) {
+		return "Hi " + name + "?";
+	}
+}

@@ -1,0 +1,8 @@
+package com.ssafy.step04.excellent;
+
+public class GreetingServiceKo {
+	public String sayHello(String name) {
+		return "하이 " + name;
+	}
+
+}

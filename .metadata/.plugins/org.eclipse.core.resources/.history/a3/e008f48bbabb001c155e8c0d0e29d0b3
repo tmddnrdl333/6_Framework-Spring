@@ -1,0 +1,20 @@
+package com.ssafy.hello.di4;
+
+public class HelloMessageKor implements HelloMessage {
+
+	private TestDao dao;
+
+	public void setDao(TestDao dao) {
+		this.dao = dao;
+	}
+
+	public HelloMessageKor() {
+		System.out.println("HelloMessageKor Contructor Call!!!!!!!!!");
+	}
+
+	public String hello(String name) {
+		name = dao.getName();
+		return "안녕하세요 " + name;
+	}
+
+}

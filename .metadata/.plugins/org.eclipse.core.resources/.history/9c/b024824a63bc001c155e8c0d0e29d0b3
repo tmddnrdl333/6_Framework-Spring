@@ -1,0 +1,11 @@
+package com.ssafy.step01.constructor;
+
+public class OutputServiceFile implements OutputService {
+
+	@Override
+	public void output(String msg) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+
+
+	<!-- 핵심로직 빈 등록 -->
+	<bean id="greeting" class="com.ssafy.step01.xml.GreetingServiceKo"></bean>
+	<!-- 공통로직 빈 등록 -->
+	<bean id="logAspect" class="com.ssafy.step01.xml.LogAspect"></bean>
+	<bean id="timeCheckAspect" class="com.ssafy.step01.xml.TimeCheckAspect"></bean>
+
+	<aop:config>
+		<aop:pointcut expression="execution(* com.ssafy..*(..))" id="ssafyPointCut"/>
+		<!-- 공통로직이 pojo일 때 -->
+		<aop:aspect ref="logAspect">
+ 			<aop:before method="beforeLogging"
+			pointcut="execution(public void com.ssafy.step01.xml.GreetingService.sayHello(java.lang.String))"/>
+<!-- 			<aop:before method="beforeLogging"
+			pointcut="execution(public void com.ssafy.step01.xml.GreetingService.say*())"/> -->
+<!-- 			<aop:before method="beforeLogging"
+			pointcut="execution(public void com.ssafy.step01.xml.GreetingService.say*(..))"/> -->
+		</aop:aspect>
+		<aop:aspect ref="timeCheckAspect">
+		
+		</aop:aspect>
+		
+	</aop:config>
+</beans>

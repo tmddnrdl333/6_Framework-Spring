@@ -1,0 +1,10 @@
+package com.ssafy.step01.constructor;
+
+public class GreetingServiceKo implements GreetingService {
+
+	private OutputService outputter; // 의존객체를 담을 멤버변수 선언
+
+	public void sayHello(String name) {
+		outputter.output("하이 " + name);
+	}
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- scope에 default는 singleton이고, prototype 이나 session 등으로 바꿔서 의도적으로 싱글톤이 아니게 할 수도 있음. -->
+	<!-- <bean id="kor" class="com.ssafy.hello.di4.HelloMessageKor">
+		<property name="dao" ref="d"></property>
+	</bean>
+	<bean id="eng" class="com.ssafy.hello.di4.HelloMessageEng"></bean>
+	<bean id="d" class="com.ssafy.hello.di4.TestDao"></bean> -->
+
+</beans>

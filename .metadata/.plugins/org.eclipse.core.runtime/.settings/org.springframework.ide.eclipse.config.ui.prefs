@@ -1,2 +1,10 @@
 //com.springsource.config.ui.prefs.activePageIndex\:/hello_di/src/com/ssafy/hello/di4/application.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring_di_annotation/src/com/ssafy/configuration/applicationContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring_di_xmlconfig/src/com/ssafy/configuration/applicationContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring_step01_basic/src/main/resources/beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring_step02_di/src/main/resources/beans1.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="4"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring_step02_di/src/main/resources/beans2.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring_step02_di/src/main/resources/beans3.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring_step03_aop/src/main/resources/beans1.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring_step03_aop/src/main/resources/beans2.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
 eclipse.preferences.version=1

@@ -9,10 +9,15 @@
 <body>
 	<jsp:include page="/WEB-INF/views/menu.jsp"></jsp:include>	
 		
-	<img src="${root}/resources/img/ssafy_logo.png" width="100px" height="70px"/>
+	<img src="${root}/img/ssafy_logo.png" width="100px" height="70px"/>
 	<h1>도서 관리</h1>
 
 <p>HI HI</p>
+
+<ul>
+	<li><a href="${root}/book/list.do">도서 목록</a></li>
+	<li><a href="${root}/book/regist_form.do">도서 등록</a></li>
+</ul>
 </body>
 </html>
 

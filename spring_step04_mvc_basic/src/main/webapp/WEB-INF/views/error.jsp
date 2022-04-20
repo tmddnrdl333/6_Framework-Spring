@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h1>실행시 문제가 발생하였습니다.- ${errorMsg}</h1>
-	<a href="${root}/index.jsp">메인으로 이동</a>
+	<a href="${root}/">메인으로 이동</a>
 </body>
 </html>

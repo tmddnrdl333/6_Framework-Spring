@@ -10,6 +10,7 @@ public class RootPathListener implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent sce)  { 
     }
     public void contextInitialized(ServletContextEvent sce)  {
+    	System.out.println("root set...");
     	ServletContext ctx = sce.getServletContext();
     	ctx.setAttribute("root", ctx.getContextPath());
     }

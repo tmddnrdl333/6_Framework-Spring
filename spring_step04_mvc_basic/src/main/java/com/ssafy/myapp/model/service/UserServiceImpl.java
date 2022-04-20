@@ -11,12 +11,19 @@ import com.ssafy.myapp.model.dao.UserDAO;
 public class UserServiceImpl implements UserService {
 
 	private UserDAO userDao;
+
 	@Autowired
 	public void setUserDao(UserDAO userDao) {
 		this.userDao = userDao;
 	}
+
 	@Override
-	public String login(String id,String pass) throws SQLException {
+	public String[] login(String id, String pass) throws SQLException {
 		return userDao.login(id, pass);
+	}
+
+	@Override
+	public void modifyProfile(String id, String profile) throws SQLException {
+		userDao.updateProfile(id, profile);
 	}
 }

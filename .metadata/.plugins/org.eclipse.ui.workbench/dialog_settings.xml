@@ -10,6 +10,9 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\SeungNong\Downloads\spring_step04_mvc_basic"/>
+			<item value="C:\Users\SeungNong\Downloads\framework_0419_배포\guestbook_file_interceptor"/>
+			<item value="C:\Users\SeungNong\Downloads\framework_0419_배포\guestbook_springmvc"/>
 			<item value="C:\Users\SeungNong\Downloads\framework_0419_배포\guestbook_spring"/>
 			<item value="C:\Users\SeungNong\Downloads\0418_배포\spring_webmvc"/>
 			<item value="C:\Users\SeungNong\Downloads\framework_0414_배포\spring_di_javaconfig"/>

@@ -21,14 +21,14 @@ public class DeptServiceImpl implements DeptService {
 
 	@Override
 	public boolean registDept(Dept dept) throws SQLException {
-		if(getDept(dept.getDeptno()) != null) {
+		if(getDept(dept.getDeptNo()) != null) {
 			throw new  IllegalArgumentException("이미 등록된 부서입니다.");
 		}
 		return deptDao.insertDept(dept);
 	}
 	@Override
 	public boolean modifyDept(Dept dept) throws SQLException {
-		if(deptDao.selectDept(dept.getDeptno()) == null) {
+		if(deptDao.selectDept(dept.getDeptNo()) == null) {
 			throw new  IllegalArgumentException("등록된 부서가 없습니다.");
 		}
 		return deptDao.updateDept(dept);

@@ -20,7 +20,7 @@ public class DeptDAOImpl implements DeptDAO {
 	public boolean insertDept0(Dept dept) throws SQLException {
 		Connection conn = null;
 		Statement stmt = null;
-		String sql = "insert into dept values("+dept.getDeptno()+",'"+dept.getDname()+"','"+dept.getLoc()+"')";
+		String sql = "insert into dept values("+dept.getDeptNo()+",'"+dept.getdName()+"','"+dept.getLoc()+"')";
 		try {
 			conn = DBUtil.getConnection();
 			stmt = conn.createStatement();
@@ -40,8 +40,8 @@ public class DeptDAOImpl implements DeptDAO {
 			conn = DBUtil.getConnection();
 			stmt = conn.prepareStatement(sql);
 			
-			stmt.setInt(1, dept.getDeptno());
-			stmt.setString(2, dept.getDname());
+			stmt.setInt(1, dept.getDeptNo());
+			stmt.setString(2, dept.getdName());
 			stmt.setString(3, dept.getLoc());
 			int rowCount = stmt.executeUpdate();
 			return rowCount>0;
@@ -122,9 +122,9 @@ public class DeptDAOImpl implements DeptDAO {
 			conn = DBUtil.getConnection();
 			stmt = conn.prepareStatement(sql);
 			
-			stmt.setString(1, dept.getDname());
+			stmt.setString(1, dept.getdName());
 			stmt.setString(2, dept.getLoc());
-			stmt.setInt(3, dept.getDeptno());
+			stmt.setInt(3, dept.getDeptNo());
 			int rowCount = stmt.executeUpdate();
 			return rowCount>0;
 		}finally {

@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="${root}/resources/css/table1.css" rel="stylesheet">
+<link href="${root}/css/table1.css" rel="stylesheet">
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/menu.jsp"></jsp:include>	
@@ -25,8 +25,8 @@
 			<c:when test="${not empty deptList}">
 				<c:forEach items="${deptList}" var="dept">
 					<tr>
-						<td>${dept.deptno}</td>
-						<td><a href="${root}/dept/detail.do?deptNo=${dept.deptno}">${dept.dname}</a></td>
+						<td>${dept.deptNo}</td>
+						<td><a href="${root}/dept/detail.do?deptNo=${dept.deptNo}">${dept.dName}</a></td>
 					</tr>
 				</c:forEach>			
 			</c:when>

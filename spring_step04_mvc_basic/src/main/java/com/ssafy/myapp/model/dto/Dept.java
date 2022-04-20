@@ -1,36 +1,39 @@
 package com.ssafy.myapp.model.dto;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class Dept {
 
-	private int deptno;
-	private String dname;
+	private int deptNo;
+	private String dName;
 	private String loc;
-	
-	public Dept(int deptno, String dname, String loc) {
-		super();
-		this.deptno = deptno;
-		this.dname = dname;
-		this.loc = loc;
-	}
 
 	public Dept() {
 		super();
 	}
 
-	public int getDeptno() {
-		return deptno;
+	public Dept(int deptNo, String dName, String loc) {
+		super();
+		this.deptNo = deptNo;
+		this.dName = dName;
+		this.loc = loc;
 	}
 
-	public void setDeptno(int deptno) {
-		this.deptno = deptno;
+	public int getDeptNo() {
+		return deptNo;
 	}
 
-	public String getDname() {
-		return dname;
+	public void setDeptNo(int deptNo) {
+		this.deptNo = deptNo;
 	}
 
-	public void setDname(String dname) {
-		this.dname = dname;
+	public String getdName() {
+		return dName;
+	}
+
+	public void setdName(String dName) {
+		this.dName = dName;
 	}
 
 	public String getLoc() {
@@ -41,8 +44,8 @@ public class Dept {
 		this.loc = loc;
 	}
 
-	@Override
 	public String toString() {
-		return "Dept [deptno=" + deptno + ", dname=" + dname + ", loc=" + loc + "]";
+		return super.toString();
 	}
+
 }

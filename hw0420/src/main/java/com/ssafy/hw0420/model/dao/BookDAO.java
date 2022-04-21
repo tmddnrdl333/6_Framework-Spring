@@ -13,4 +13,7 @@ public interface BookDAO {
 
 	Book selectBook(String isbn) throws SQLException;
 
+	boolean updateBook(Book book) throws SQLException;
+
+	boolean deleteBook(String isbn) throws SQLException;
 }

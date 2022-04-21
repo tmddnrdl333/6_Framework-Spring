@@ -11,4 +11,8 @@ public interface BookService {
 	List<Book> getBookList() throws SQLException;
 
 	Book getBook(String isbn) throws SQLException;
+
+	boolean modifyBook(Book book) throws SQLException;
+
+	boolean removeBook(String isbn) throws SQLException;
 }

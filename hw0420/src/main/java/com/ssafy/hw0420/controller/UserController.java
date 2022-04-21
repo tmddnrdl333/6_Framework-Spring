@@ -26,12 +26,10 @@ public class UserController {
 	@PostMapping("/login.do")
 	public String login(@RequestParam String id, @RequestParam String pass, Model model, HttpSession session)
 			throws Exception {
-		System.out.println("HAWEE");
 		String name = userService.login(id, pass);
 		if (name != null) {
 			session.setAttribute("userId", id);
 			session.setAttribute("userName", name);
-			System.out.println("HI");
 			return "redirect:/";
 		} else {
 			model.addAttribute("errorMsg", "아이디 또는 비밀번호가 일치하지 않습니다.");

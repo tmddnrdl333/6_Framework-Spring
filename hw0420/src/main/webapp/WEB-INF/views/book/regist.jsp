@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>BookRegist</title>
+<link href="${root}/css/table.css" rel="stylesheet">
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/menu.jsp"></jsp:include>

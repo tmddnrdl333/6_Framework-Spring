@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>BookList</title>
+<link href="${root}/css/table.css" rel="stylesheet">
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/menu.jsp"></jsp:include>
@@ -25,7 +26,7 @@
 					<c:forEach items="${bookList}" var="book">
 						<tr>
 							<td>${book.isbn}</td>
-							<td>${book.title}</td>
+							<td><a href="${root}/book/detail.do?isbn=${book.isbn}">${book.title}</a></td>
 						</tr>
 					</c:forEach>
 				</c:when>

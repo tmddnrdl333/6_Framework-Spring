@@ -34,8 +34,17 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public Book getBook(String isbn) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		return bookDao.selectBook(isbn);
+	}
+
+	@Override
+	public boolean modifyBook(Book book) throws SQLException {
+		return bookDao.updateBook(book);
+	}
+
+	@Override
+	public boolean removeBook(String isbn) throws SQLException {
+		return bookDao.deleteBook(isbn);
 	}
 
 }

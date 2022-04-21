@@ -79,4 +79,42 @@ public class BookDAOImpl implements BookDAO {
 		}
 		return null;
 	}
+
+	@Override
+	public boolean updateBook(Book book) throws SQLException {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		String sql = "update book set title=?, author=?, price=?, `desc`=?, img=? where isbn=?"; // desc?
+		try {
+			conn = DBUtil.getConnection();
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, book.getTitle());
+			stmt.setString(2, book.getAuthor());
+			stmt.setInt(3, book.getPrice());
+			stmt.setString(4, book.getDesc());
+			stmt.setString(5, book.getImg());
+			stmt.setString(6, book.getIsbn());
+			int rowCount = stmt.executeUpdate();
+			return rowCount > 0;
+		} finally {
+			DBUtil.close(stmt, conn);
+		}
+	}
+
+	@Override
+	public boolean deleteBook(String isbn) throws SQLException {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		String sql = "delete from book where isbn=?";
+		try {
+			conn = DBUtil.getConnection();
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, isbn);
+			int rowCount = stmt.executeUpdate();
+			return rowCount > 0;
+		} finally {
+			DBUtil.close(stmt, conn);
+		}
+	}
+
 }

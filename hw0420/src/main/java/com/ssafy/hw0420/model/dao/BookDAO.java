@@ -1,19 +1,19 @@
 package com.ssafy.hw0420.model.dao;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import com.ssafy.hw0420.model.dto.Book;
 
 public interface BookDAO {
 
-	boolean insertBook(Book book) throws SQLException;
+	boolean insertBook(Book book);
 
-	List<Book> selectBookList() throws SQLException;
+	boolean updateBook(Book book);
 
-	Book selectBook(String isbn) throws SQLException;
+	boolean deleteBook(String isbn);
 
-	boolean updateBook(Book book) throws SQLException;
+	Book selectBook(String isbn);
 
-	boolean deleteBook(String isbn) throws SQLException;
+	List<Book> selectBookList();
+
 }

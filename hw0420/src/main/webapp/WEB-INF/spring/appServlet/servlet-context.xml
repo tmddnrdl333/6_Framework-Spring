@@ -12,10 +12,6 @@
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
-	<context:component-scan base-package="com.ssafy.hw0420" />
-
-	<!-- redirect -->
-	<view-controller path="/book/regist_form.do" view-name="book/regist"/>
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/img/**" location="/resources/img/" />
@@ -28,7 +24,10 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	
+	<context:component-scan base-package="com.ssafy.hw0420" />
+
+	<!-- redirect -->
+	<view-controller path="/book/regist_form.do" view-name="book/regist"/>
 	
 	
 </beans:beans>

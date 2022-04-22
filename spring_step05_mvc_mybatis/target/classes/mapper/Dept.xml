@@ -16,17 +16,58 @@
 		delete from dept where deptno =#{value}
 	</delete>
 
-	<select id="selectDept" parameterType="int" resultType="Dept">
-		select deptno,dname,loc from dept where deptno = #{value}
-	</select>
+	<sql id="basicDeptSQL">
+		select deptNo,dName,loc from dept
+	</sql>
 
-	<!-- 여러 레코드를 가져와도 resultType는 하나의 레코드(행)에 대한 타입, 그래서 Dept  -->
-	<select id="selectDeptList" resultType="Dept">
-		select deptno,dname,loc from dept
+	<select id="selectDept" parameterType="int" resultType="Dept">
+		<include refid="basicDeptSQL"/>
+		where deptno = #{value}
 	</select>
 	
-	<select id="selectDeptListByName" parameterType="string" resultType="Dept">
-		select deptno,dname,loc from dept where dname like #{value}
+	<resultMap type="Dept" id="DeptResultMap">
+		<id column="no" property="deptNo"/>
+		<result column="name" property="dName"/>
+		<result column="lc" property="loc"/>
+	</resultMap>
+
+	<!-- 여러 레코드를 가져와도 resultType는 하나의 레코드(행)에 대한 타입, 그래서 Dept  -->
+	<select id="selectDeptList" resultMap="DeptResultMap">
+		select deptNo as no, dName as name, loc as lc from dept
+	</select>
+	
+	<resultMap type="Emp" id="EmpSimpleResultMap">
+		<id column="empno" property="empNo"/>
+		<result column="ename" property="eName"/>
+		<result column="sal" property="sal"/>
+	</resultMap>
+	
+	<resultMap type="Dept" id="DeptWithEmpResultMap" extends="DeptResultMap">
+		<collection property="empList" resultMap="EmpSimpleResultMap"/>
+	</resultMap>
+	
+	<select id="selectDeptWithEmpList" resultMap="DeptWithEmpResultMap">
+		select d.deptNo as no, d.dName as name, d.loc as lc, e.empno, e.ename, e.sal
+		from dept d left join emp e on d.deptno=e.deptno
+		where d.deptno = #{deptNo}
+	</select>
+	
+	<select id="selectDeptListByName" parameterType="string">
+		<include refid="basicDeptSQL"/>
+		where dname like #{value}
+	</select>
+
+	<select id="selectDeptListByCondition" parameterType="map" resultType="Dept">
+		<include refid="basicDeptSQL"/>
+		<where>
+			<if test="dName!=''">
+				dname like concat('%',#{dName},'%')
+			</if>
+			
+			<if test="loc!=''">
+				and loc = #{loc}
+			</if>
+		</where>
 	</select>
 
 </mapper>

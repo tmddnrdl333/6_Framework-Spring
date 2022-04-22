@@ -1,6 +1,7 @@
 package com.ssafy.myapp.model.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,11 @@ public class DeptDAOImpl implements DeptDAO {
 	}
 
 	@Override
+	public Dept selectDeptWithEmpList(int deptNo) {
+		return sqlSession.selectOne(NAME_SPACE + "selectDeptWithEmpList", deptNo);
+	}
+
+	@Override
 	public List<Dept> selectDeptList() {
 		return sqlSession.selectList(NAME_SPACE + "selectDeptList");
 	}
@@ -48,5 +54,10 @@ public class DeptDAOImpl implements DeptDAO {
 	@Override
 	public List<Dept> selectDeptListByName(String dName) {
 		return sqlSession.selectList(NAME_SPACE + "selectDeptListByName", "%" + dName + "%");
+	}
+
+	@Override
+	public List<Dept> selectDeptListByCondition(Map<String, String> condition) {
+		return sqlSession.selectList(NAME_SPACE + "selectDeptListByCondition", condition);
 	}
 }

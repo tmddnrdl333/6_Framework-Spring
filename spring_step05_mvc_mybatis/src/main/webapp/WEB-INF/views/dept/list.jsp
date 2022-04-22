@@ -13,6 +13,13 @@
 <body>
 <jsp:include page="/WEB-INF/views/menu.jsp"></jsp:include>	
 	<h1>부서 목록</h1>
+	
+	<form action="${root}/dept/search" method="post">
+		부서명 : <input type="text" name="dName" value="${param.dName}"/>
+		지역 : <input type="text" name="loc" value="${param.loc}"/>
+		<input type="submit" value="검색"/>
+	</form>
+	
 	<table>
 		<thead>
 			<tr>

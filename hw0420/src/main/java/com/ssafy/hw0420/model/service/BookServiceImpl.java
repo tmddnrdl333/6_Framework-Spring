@@ -1,6 +1,5 @@
 package com.ssafy.hw0420.model.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public boolean registBook(Book book) throws SQLException {
+	public boolean registBook(Book book) {
 		if (getBook(book.getIsbn()) != null) {
 			throw new IllegalArgumentException("이미 등록된 번호입니다.");
 		}
@@ -28,23 +27,23 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public List<Book> getBookList() throws SQLException {
-		return bookDao.selectBookList();
-	}
-
-	@Override
-	public Book getBook(String isbn) throws SQLException {
-		return bookDao.selectBook(isbn);
-	}
-
-	@Override
-	public boolean modifyBook(Book book) throws SQLException {
+	public boolean modifyBook(Book book) {
 		return bookDao.updateBook(book);
 	}
 
 	@Override
-	public boolean removeBook(String isbn) throws SQLException {
+	public boolean removeBook(String isbn) {
 		return bookDao.deleteBook(isbn);
+	}
+
+	@Override
+	public Book getBook(String isbn) {
+		return bookDao.selectBook(isbn);
+	}
+
+	@Override
+	public List<Book> getBookList() {
+		return bookDao.selectBookList();
 	}
 
 }

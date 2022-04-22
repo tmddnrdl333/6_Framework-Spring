@@ -1,6 +1,7 @@
 package com.ssafy.myapp.model.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.ssafy.myapp.model.dto.Dept;
 
@@ -10,6 +11,8 @@ public interface DeptDAO {
 
 	Dept selectDept(int deptNo);
 
+	Dept selectDeptWithEmpList(int deptNo);
+
 	List<Dept> selectDeptList();
 
 	boolean deleteDept(int deptNo);
@@ -17,6 +20,9 @@ public interface DeptDAO {
 	boolean updateDept(Dept dept);
 
 	// 부서이름을 이용하여 포함검색한 부서리스트 리턴
-	List<Dept> selectDeptListByName(String dName) ;
+	List<Dept> selectDeptListByName(String dName);
+
+	// 검색 조건에 따른 부서리스트 리턴
+	List<Dept> selectDeptListByCondition(Map<String, String> condition);
 
 }

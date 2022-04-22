@@ -1,18 +1,17 @@
 package com.ssafy.hw0420.model.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import com.ssafy.hw0420.model.dto.Book;
 
 public interface BookService {
-	boolean registBook(Book book) throws SQLException;
+	boolean registBook(Book book);
 
-	List<Book> getBookList() throws SQLException;
+	boolean modifyBook(Book book);
 
-	Book getBook(String isbn) throws SQLException;
+	boolean removeBook(String isbn);
 
-	boolean modifyBook(Book book) throws SQLException;
+	Book getBook(String isbn);
 
-	boolean removeBook(String isbn) throws SQLException;
+	List<Book> getBookList();
 }

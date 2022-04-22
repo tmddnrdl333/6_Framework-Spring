@@ -6,12 +6,11 @@
   
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.ssafy.myapp.model.dto.Dept" alias="Dept"/>
-		<typeAlias type="com.ssafy.myapp.model.dto.Emp" alias="Emp"/>
+		<typeAlias type="com.ssafy.hw0420.model.dto.Book" alias="Book"/>
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="mapper/Dept.xml"/>
+		<mapper resource="mapper/Book.xml"/>
 	</mappers>
 	
 </configuration>

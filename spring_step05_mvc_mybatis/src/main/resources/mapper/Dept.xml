@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.ssafy.myapp.model.dao.DeptDAO">
+	<insert id="insertDept" parameterType="Dept">
+		insert into dept values(#{deptNo}, #{dName}, #{loc})
+	</insert>
+	
+	<update id="updateDept" parameterType="Dept">
+		update dept set dname=#{dName} , loc=#{loc} where deptno=#{deptNo}
+	</update>
+	
+	<delete id="deleteDept" parameterType="int">
+		delete from dept where deptno =#{value}
+	</delete>
+
+	<select id="selectDept" parameterType="int" resultType="Dept">
+		select deptno,dname,loc from dept where deptno = #{value}
+	</select>
+
+	<!-- 여러 레코드를 가져와도 resultType는 하나의 레코드(행)에 대한 타입, 그래서 Dept  -->
+	<select id="selectDeptList" resultType="Dept">
+		select deptno,dname,loc from dept
+	</select>
+	
+	<select id="selectDeptListByName" parameterType="string" resultType="Dept">
+		select deptno,dname,loc from dept where dname like #{value}
+	</select>
+
+</mapper>

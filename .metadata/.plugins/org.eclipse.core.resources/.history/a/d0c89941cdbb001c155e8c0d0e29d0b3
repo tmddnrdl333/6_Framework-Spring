@@ -1,7 +1,0 @@
-package com.ssafy.step01.reflect;
-
-public class CarReflectionTest {
-	public static void main(String[] args) {
-		Scanner sc = new 
-	}
-}

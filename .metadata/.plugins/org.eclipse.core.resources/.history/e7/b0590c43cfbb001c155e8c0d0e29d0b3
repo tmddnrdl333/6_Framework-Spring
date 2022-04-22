@@ -1,9 +1,0 @@
-package com.ssafy.step01.reflect;
-
-public class Car {
-	private int distance, speed;
-
-	public void go() {
-		System.out.println("띠띠빵빠앙");
-	}
-}

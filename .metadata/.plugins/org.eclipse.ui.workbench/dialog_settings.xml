@@ -10,6 +10,8 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\SeungNong\Downloads\framework_0421_배포\guestbook_mybatis_spring"/>
+			<item value="C:\Users\SeungNong\Downloads\framework_0421_배포\guestbook_mybatis"/>
 			<item value="C:\Users\SeungNong\Downloads\spring_step04_mvc_basic"/>
 			<item value="C:\Users\SeungNong\Downloads\framework_0419_배포\guestbook_file_interceptor"/>
 			<item value="C:\Users\SeungNong\Downloads\framework_0419_배포\guestbook_springmvc"/>

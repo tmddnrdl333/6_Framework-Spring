@@ -1,9 +1,0 @@
-package com.ssafy.hello.di4;
-
-public class TestDao {
-
-	public String getName() {
-		return "김싸피";
-	}
-
-}

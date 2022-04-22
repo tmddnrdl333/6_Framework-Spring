@@ -1,7 +1,7 @@
 package com.ssafy.hw0420.model.service;
 
-import java.sql.SQLException;
+import java.util.Map;
 
 public interface UserService {
-	String login(String id, String pass) throws SQLException;
+	public String login(Map<String, String> userinfo);
 }

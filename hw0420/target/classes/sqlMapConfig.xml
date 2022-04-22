@@ -7,10 +7,12 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="com.ssafy.hw0420.model.dto.Book" alias="Book"/>
+		<typeAlias type="com.ssafy.hw0420.model.dto.User" alias="User"/>		
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="mapper/Book.xml"/>
+		<mapper resource="mapper/User.xml"/>
 	</mappers>
 	
 </configuration>

@@ -1,5 +1,0 @@
-package com.ssafy.step01.constructor;
-
-public class OutputServiceConsole implements OutputService {
-
-}

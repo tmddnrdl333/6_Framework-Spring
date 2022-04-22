@@ -1,7 +1,7 @@
 package com.ssafy.hw0420.model.dao;
 
-import java.sql.SQLException;
+import java.util.Map;
 
 public interface UserDAO {
-	String login(String id, String pass) throws SQLException;
+	String login(Map<String, String> userinfo);
 }

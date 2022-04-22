@@ -1,5 +1,0 @@
-package com.ssafy.step01.xml;
-
-public interface OutputService {
-	void output(String msg);
-}

@@ -1,9 +1,0 @@
-package com.ssafy.step01.xml;
-
-public class GreetingServiceKo implements GreetingService {
-
-	public void sayHello(String name) {
-		System.out.println("하이 " + name);
-	}
-
-}

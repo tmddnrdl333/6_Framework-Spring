@@ -12,7 +12,7 @@
 	
 	<!-- Application Loggers -->
 	<logger name="com.ssafy.hw0420">
-		<level value="info" />
+		<level value="trace" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->

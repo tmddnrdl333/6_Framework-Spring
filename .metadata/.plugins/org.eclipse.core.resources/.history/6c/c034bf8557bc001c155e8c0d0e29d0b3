@@ -1,9 +1,0 @@
-package com.ssafy.step04.excellent;
-
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-public class GreetingTest {
-	public static void main(String[] args) {
-		ClassPathXmlApplicationContext
-	}
-}

@@ -1,7 +1,0 @@
-package com.ssafy.step01.constructor;
-
-public class GreetingServiceEn implements GreetingService {
-	public void sayHello(String name) {
-		System.out.println("Hi " + name);
-	}
-}

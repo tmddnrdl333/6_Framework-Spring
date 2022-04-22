@@ -1,5 +1,7 @@
 package com.ssafy.hw0420.controller;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,22 +26,20 @@ public class UserController {
 	}
 
 	@PostMapping("/login.do")
-	public String login(@RequestParam String id, @RequestParam String pass, Model model, HttpSession session)
-			throws Exception {
-		String name = userService.login(id, pass);
+	public String login(@RequestParam Map<String, String> userinfo, Model model, HttpSession session) {
+		String name = userService.login(userinfo);
 		if (name != null) {
-			session.setAttribute("userId", id);
+			session.setAttribute("userId", userinfo.get("id"));
 			session.setAttribute("userName", name);
 			return "redirect:/";
 		} else {
 			model.addAttribute("errorMsg", "아이디 또는 비밀번호가 일치하지 않습니다.");
-			System.out.println("HELLO");
 			return "/";
 		}
 	}
 
 	@GetMapping("/logout.do")
-	public String logout(HttpSession session) throws Exception {
+	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:/";
 	}

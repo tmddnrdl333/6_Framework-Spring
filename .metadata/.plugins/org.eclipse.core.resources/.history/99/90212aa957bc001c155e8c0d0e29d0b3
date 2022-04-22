@@ -1,7 +1,0 @@
-package com.ssafy.step04.excellent;
-
-public class GreetingService {
-	public String sayHello() {
-		return null;
-	}
-}

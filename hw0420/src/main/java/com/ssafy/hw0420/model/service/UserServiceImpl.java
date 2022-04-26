@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public String login(Map<String, String> userinfo) {
-		return userDao.login(userinfo);
+		return userDao.selectUser(userinfo);
 	}
 
 }

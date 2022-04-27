@@ -60,11 +60,11 @@
 	<select id="selectDeptListByCondition" parameterType="map" resultType="Dept">
 		<include refid="basicDeptSQL"/>
 		<where>
-			<if test="dName!=''">
-				dname like concat('%',#{dName},'%')
+			<if test="dName!='' and dName != null">
+				dname2 like concat('%',#{dName},'%')
 			</if>
 			
-			<if test="loc!=''">
+			<if test="loc!='' and loc != null">
 				and loc = #{loc}
 			</if>
 		</where>

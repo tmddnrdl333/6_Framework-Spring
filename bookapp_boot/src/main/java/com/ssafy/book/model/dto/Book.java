@@ -1,14 +1,22 @@
 package com.ssafy.book.model.dto;
 
-import org.springframework.stereotype.Repository;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-@Repository
+@ApiModel(value = "Book (도서 정보)", description = "도서 번호, 제목, 저자, 가격, 설명, 이미지 링크의 정보를 가진 클래스")
 public class Book {
+
+	@ApiModelProperty(value = "도서 번호")
 	String isbn;
+	@ApiModelProperty(value = "제목")
 	String title;
+	@ApiModelProperty(value = "저자")
 	String author;
+	@ApiModelProperty(value = "가격")
 	int price;
+	@ApiModelProperty(value = "설명")
 	String desc;
+	@ApiModelProperty(value = "이미지 링크")
 	String img;
 
 	public Book() {

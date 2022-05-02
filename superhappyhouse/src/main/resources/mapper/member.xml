@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.happyhouse.model.mapper.MemberMapper">
+
+	<select id="idCheck" parameterType="String" resultType="int">
+		select 	count(id)
+		from 	member
+		where 	id = #{id}
+	</select>
+	
+	<insert id="registMember" parameterType="MemberDto">
+		insert 	into member (id, pw, name, email, phone, address)
+		values 	(#{id}, #{pw}, #{name}, #{email}, #{phone}, #{address})
+	</insert>
+
+	<select id="login" parameterType="map" resultType="MemberDto">
+		select 	id, pw, name, email, phone, address
+		from 	member
+		where 	id = #{id} and pw = #{pw}
+	</select>
+	
+	<select id="listMember" resultType="MemberDto">
+		select id, pw, name, email, phone, address
+		from member
+	</select>
+	
+	<select id="getMember" parameterType="String" resultType="MemberDto">
+		select 	id, pw, name, email, phone, address
+		from 	member
+		where 	id = #{id}
+	</select>
+	
+	<update id="updateMember" parameterType="MemberDto">
+		update member
+		<trim prefix="set" suffixOverrides=",">
+			<if test="pw != null">	pw = #{pw},</if>
+			<if test="email != null">	email = #{email},</if>
+		</trim>
+		where 	id = #{id}
+	</update>
+	
+	<delete id="deleteMember" parameterType="String">
+		delete 	from member
+		where 	id = #{id}
+	</delete>
+	
+	
+</mapper>
